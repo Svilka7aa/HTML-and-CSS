@@ -1,0 +1,81 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.viewport {
+    height: 50vh;
+    background: #eee;
+    overflow: hidden;
+    position: relative;
+}
+
+.viewport.portrait .card {
+    width: auto;
+    height: 80%;
+}
+
+.viewport.portrait .card img {
+    width: auto;
+    height: 100%;
+}
+
+.card {
+    display: block;
+    width: 40%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    border-radius: 0.5em;
+    box-shadow: 0 0 13em rgba(0, 0, 0, 0.3);
+
+}
+
+.card:after {
+    display: block;
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 1);
+    opacity: 0.4;
+    transition: opcity 0.3 ease-in;
+
+}
+
+.card:hover:after {
+    opacity: 0;
+}
+
+.card img {
+    display: block;
+    width: 100%;
+}
+
+.card .icons {
+    position: absolute;
+    inset: 0;
+    z-index: 10;
+    display: flex;
+    padding: 1em;
+    align-items: end;
+    justify-content: end;
+}
+
+.card .icons svg  {
+    fill: #fff;
+    width: 2em;
+}
+
+
+
+.viewport:nth-child(1) {
+    background: linear-gradient(103deg, rgba(188,190,40,0.9297533356741573) 0%, rgba(57,112,108,1) 53%, rgba(59,0,255,1) 100%);
+}
+
+.viewport:nth-child(2) {
+    background: linear-gradient(103deg, rgba(40,43,190,0.9297533356741573) 0%, rgba(66,112,57,1) 53%, rgba(255,39,0,1) 100%);
+}
+
